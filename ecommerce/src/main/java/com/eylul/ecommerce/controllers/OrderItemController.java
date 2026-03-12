@@ -28,8 +28,8 @@ public class OrderItemController {
         return orderItemService.save(orderItem);
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    @DeleteMapping("/delete")
+    public void delete(@RequestParam("id") Long id) {
         orderItemService.delete(id);
     }
 }

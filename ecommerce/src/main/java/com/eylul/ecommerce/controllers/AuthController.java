@@ -1,5 +1,6 @@
 package com.eylul.ecommerce.controllers;
 
+import com.eylul.ecommerce.dto.AuthResponse;
 import com.eylul.ecommerce.dto.LoginRequest;
 import com.eylul.ecommerce.dto.RegisterRequest;
 import com.eylul.ecommerce.models.User;
@@ -21,7 +22,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public boolean login(@RequestBody LoginRequest request) {
+    public AuthResponse login(@RequestBody LoginRequest request) {
         return authService.login(request);
     }
 }
